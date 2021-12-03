@@ -2,6 +2,7 @@
     include('define.php');
     include('includes/functions.php');
 ?>
+
 <?php
     if( isset( $_POST ) ){
         $id = $_POST['id'];
