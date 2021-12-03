@@ -1,0 +1,125 @@
+header {
+    a {
+        text-decoration: none;
+    }
+    ul {
+        @extend %clearfix;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            float: left;
+            transition: all 0.5s;
+        }
+    }
+    .top_head {
+        background-color: #1a0e36;
+        color: #767676;
+        font-size: 12px;
+        height: 36px;
+        line-height: 36px;
+        font-weight: 400;
+        a {
+            color: #767676;
+        }
+        li {
+            padding-right: 15px;
+        }
+        .top_head-inner {
+            @extend %clearfix;
+            .socials {
+                a {
+                    margin: 0 5px;
+                }
+                margin-right: 25px;
+            }
+            .account-block {
+                @extend %clearfix;
+                .account {
+                    a {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .header {
+        .inner {
+            @extend %clearfix;
+            .logo {
+                margin-right: 50px;
+            }
+            //head-left
+            .head-left {
+                @include flexbox();
+                @include align-items( center );
+                //head-nav
+                .head-nav {
+                    @extend %clearfix;
+                    li {
+                        &.active,
+                        &:hover {
+                            background-color: #1a0e36;
+                            color: #fff;
+                            > a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        padding: 32px 13px;
+                        line-height: normal;
+                    }
+                    .has-child {
+                        position: relative;
+                        a {
+                            padding-right: 15px;
+                        }
+                        .sub-menu {
+                            display: none;
+                            position: absolute;
+                            z-index: 2;
+                            background-color: #fff;
+                            li {
+                                float: none;
+                                min-width: 120px;
+                            }
+                            ul {
+                                left: 100%;
+                                top: 0;
+                            }
+                            
+                        }
+                        &:hover > ul {
+                            display: block;
+                            &:after {
+                                color: #fff;
+                            }
+                        }
+                        &:after {
+                            content: "\f0d7";
+                            font-family: 'FontAwesome';
+                            margin-left: 3px;
+                            position: absolute;
+                            top: 37%;
+                            right: 0;
+                        }
+                        .has-child:after {
+                            content: "\f0da";
+                        }
+                    }
+                }
+            }
+            //@end head-left
+            .block-right {
+                .search {
+                    padding: 30px 13px;
+                    display: block;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+//@end head-nav

@@ -1,0 +1,94 @@
+.footer {
+    background-color: #090e1d;
+    .inner {
+        .footer-top, .footer-bottom {
+            @include flexbox();
+            @include align-items( center );
+            font-weight: 400;
+            @include justify-content( space-between );
+            padding: 35px 0;
+            border-bottom: 1px solid #8f95aa;
+        }
+        .footer-nav {
+            margin-top: 25px;
+            ul {
+                margin: 0;
+                padding: 0;
+                @extend %clearfix;
+                li {
+                    list-style: none;
+                    float: left;
+                    a {
+                        display: block;
+                        padding: 10px 13px;
+                        line-height: normal;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                color: #8f95aa;
+            }
+        }
+        .footer-info {
+            padding: 75px 0;
+            @include flexbox();
+            @include justify-content( space-between );
+            border-bottom: 1px solid #8f95aa;
+            a {
+                text-decoration: none;
+                color: #8f95aa;
+            }
+            .introduct-block {
+                width: 310px;
+                color: #8f95aa;
+                p {
+                    margin-top: 0;
+                    font-size: 14px;
+                }
+                .social {
+                    margin-top: 10px;
+                    a {
+                        padding: 13px 15px;
+                        color: #fff;
+                        margin-right: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+            .footer-links {
+                a {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .footer-bottom {
+            padding: 10px 0;
+            border-bottom: 0;
+            .block-left {
+                a {
+                    color: #f44336;
+                }
+                span {
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+            .block-right {
+                text-align: right;
+                color: #8f95aa;
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                }
+                .footer-nav {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

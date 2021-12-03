@@ -1,0 +1,17 @@
+@import 'core';
+@import 'form_user';
+body {
+    margin: 0;
+}
+.overlay-font {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.display_none {
+    display: none;
+}
+

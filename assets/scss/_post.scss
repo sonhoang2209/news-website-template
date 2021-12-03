@@ -1,0 +1,26 @@
+.post-block {
+    .quote {
+        background: #F3F8FE;
+        padding: 30px;
+        padding-left: 100px;
+        position: relative;
+        &:before {
+            content: "\f10e";
+            font-family: 'FontAwesome';
+            position: absolute;
+            font-size: 50px;
+            top:30px;
+            left: 30px;
+            color: #3995F1;
+        }
+    }
+    .images-2 {
+        display: flex;
+        justify-content: space-between;
+        height: 200px;
+        > img {
+            width: calc( (100% - 20px ) / 2 );
+            height: 100%;
+        }
+    }
+}

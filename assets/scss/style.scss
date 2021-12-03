@@ -1,0 +1,97 @@
+$main-color: #1a0e36;
+@import 'font';
+@import 'core';
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'post';
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin:0;
+}
+* { 
+	&::before, 
+	&::after {
+        @include box-sizing(border-box);
+	}
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.block-left{
+    float: left;
+}
+.block-right{
+    float: right;
+}
+
+.meta {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    .tag {
+        padding: 2px 8px;
+        margin-right: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .numb-views {
+        font-family: 'DroidSerif Bold';
+        &:before {
+            content: "\f06e";
+            font-family: 'FontAwesome';
+            margin-right: 3px;
+        }
+    }
+}
+.author-block {
+    font-weight: 400;
+    font-size: 12px;
+    a {
+        font-weight: 400;
+        color: #000;
+        text-decoration: none;
+        border-right: 1px solid #838793;
+        padding-right: 5px;
+        margin-right: 3px;
+    }
+}
+
+.article-thumbnail img {
+    border-radius: 3px;
+}
+
+.twitter {
+    background-color: #31aae2;
+}
+.facebook {
+    background-color: #0b5fa6;
+}
+.dribbble {
+    background-color: #e11396;
+}
+.instagram {
+    background-color: #313131;
+}
+.pinterest-p {
+    background-color: #f52450;
+}
+.google-plus {
+    background-color: #dd4c39;
+}
+.youtube {
+    background-color: #d71e17;
+}
+.google-wallet {
+    background-color: #4c75a3;
+}
